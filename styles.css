@@ -1,0 +1,12 @@
+.lr-center-link {
+  text-align: center;
+}
+
+.lr-center-table {
+  width: 60%;
+  margin: auto auto;
+}
+
+.lr-center-table table {
+  width: 100%;
+}
