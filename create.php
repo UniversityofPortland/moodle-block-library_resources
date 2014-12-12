@@ -14,7 +14,7 @@ $_s = function($key, $a = null) {
 $blockname= $_s('pluginname');
 $header = $_s('create');
 
-$PAGE->set_context(get_context_instance(CONTEXT_SYSTEM));
+$PAGE->set_context(context_system::instance());
 $PAGE->set_heading($blockname . ': ' . $header);
 $PAGE->navbar->add($blockname);
 $PAGE->navbar->add($header);

@@ -19,7 +19,7 @@ $confirm = optional_param('confirm', 0, PARAM_INT);
 $blockname= $_s('pluginname');
 $header = get_string('delete');
 
-$PAGE->set_context(get_context_instance(CONTEXT_SYSTEM));
+$PAGE->set_context(context_system::instance());
 $PAGE->set_heading($blockname . ': ' . $header);
 $PAGE->navbar->add($blockname);
 $PAGE->navbar->add($header);

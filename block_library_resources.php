@@ -39,7 +39,7 @@ class block_library_resources extends block_list {
             }
         }
 
-        $context = get_context_instance(CONTEXT_SYSTEM);
+        $context = context_system::instance();
 
         if (is_siteadmin($USER->id) or has_capability('blocks/library_resources:manage', $context)) {
             $str = get_string('new', 'block_library_resources');
