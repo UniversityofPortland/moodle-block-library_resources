@@ -19,8 +19,11 @@ class block_library_resources extends block_list {
         $this->content->footer = '';
 
         if ($COURSE->id !== SITEID) {
-            $dept = reset(explode('-', $COURSE->shortname));
-
+            
+            $sn = $COURSE->shortname;
+            $shortname = explode('-', $sn);
+            $dept = reset($shortname);
+            
             $params = array('dept_code' => $dept);
 
             $links = $DB->get_records('block_library_resources', $params);
