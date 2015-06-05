@@ -13,7 +13,7 @@ $flash = optional_param('flash', 0, PARAM_INT);
 $blockname= $_s('pluginname');
 $header = $_s('manage');
 
-$PAGE->set_context(get_context_instance(CONTEXT_SYSTEM));
+$PAGE->set_context(context_system::instance());
 $PAGE->set_heading($blockname . ': ' . $header);
 $PAGE->navbar->add($blockname);
 $PAGE->navbar->add($header);
@@ -72,7 +72,7 @@ foreach ($links as $link) {
 
     $actions = implode(' ', array($edit, $delete));
 
-    $line = array($link->dept_code, $link->link_name, $url, $actions); 
+    $line = array($link->dept_code, $link->link_name, $url, $actions);
 
     $data[] = new html_table_row($line);
 }

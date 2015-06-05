@@ -19,8 +19,11 @@ class block_library_resources extends block_list {
         $this->content->footer = '';
 
         if ($COURSE->id !== SITEID) {
-            $dept = reset(explode('-', $COURSE->shortname));
-
+            
+            $sn = $COURSE->shortname;
+            $shortname = explode('-', $sn);
+            $dept = reset($shortname);
+            
             $params = array('dept_code' => $dept);
 
             $links = $DB->get_records('block_library_resources', $params);
@@ -39,7 +42,7 @@ class block_library_resources extends block_list {
             }
         }
 
-        $context = get_context_instance(CONTEXT_SYSTEM);
+        $context = context_system::instance();
 
         if (is_siteadmin($USER->id) or has_capability('blocks/library_resources:manage', $context)) {
             $str = get_string('new', 'block_library_resources');
