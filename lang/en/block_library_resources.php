@@ -6,6 +6,7 @@ $string['create'] = 'Add A New Library Resources Link';
 $string['new'] = 'Create a New Link';
 
 $string['library_resources:manage'] = 'Manage Library Links';
+$string['library_resources:addinstance'] = 'Add Library Resources block to courses';
 
 $string['default_link_name'] = 'Library Home Page';
 $string['default_link_url'] = 'http://library.up.edu';
