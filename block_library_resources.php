@@ -44,7 +44,7 @@ class block_library_resources extends block_list {
 
         $context = context_system::instance();
 
-        if (is_siteadmin($USER->id) or has_capability('blocks/library_resources:manage', $context)) {
+        if (is_siteadmin($USER->id) or has_capability('block/library_resources:manage', $context)) {
             $str = get_string('new', 'block_library_resources');
             $url = new moodle_url('/blocks/library_resources/create.php');
 
