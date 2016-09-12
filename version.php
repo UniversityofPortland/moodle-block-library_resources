@@ -1,4 +1,4 @@
 <?php
 
-$plugin->version = 2014121200;
+$plugin->version = 2016091200;
 $plugin->component = 'block_library_resources';
